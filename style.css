@@ -1,0 +1,68 @@
+#bloc_page
+{
+    font-family: 'Raleway', sans-serif;
+}
+#en_tete
+{
+    display: flex;
+}
+.logo
+{
+    width: 80px;
+    height: auto;
+}
+.element:nth-child(1)
+{
+    flex: 4.5;
+}
+.element:nth-child(2)
+{
+    flex: 1;
+    text-align: center;
+    color: #0065FC;
+}
+.element:nth-child(3)
+{
+    flex: 1;
+    text-align: center;
+}
+.element:nth-child(4)
+{
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #0065FC;
+}
+h1
+{
+    font-size: 1.2em;
+}
+h2
+{
+    font-size: 0.8em;
+}
+#formulaire
+{
+    display: flex;
+    justify-content: flex-start;
+}
+.elementformulaire:nth-child(1)
+{
+    border: 1px solid #F2F2F2;
+    border-radius: 10px 0 0 10px;
+    background-color: #F2F2F2;
+
+}
+.elementformulaire:nth-child(2)
+{
+    border: 1px solid #F2F2F2;
+    font-weight: bold;
+}
+.elementformulaire:nth-child(3)
+{
+    border: 1px solid #F2F2F2;
+    border-radius: 0 10px 10px 0;
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+}
