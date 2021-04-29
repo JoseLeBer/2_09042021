@@ -1,38 +1,57 @@
-#bloc_page
+body
 {
     font-family: 'Raleway', sans-serif;
 }
-#en_tete
+#bloc_page
+{
+    width: 97%;
+    margin: auto;
+    border: 1px solid black;
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+}
+#logo_reservia
 {
     display: flex;
 }
-.logo
+#logo_reservia img
 {
-    width: 80px;
+    width: 40%;
     height: auto;
 }
-.element:nth-child(1)
+nav ul
 {
-    flex: 4.5;
+    display: flex;
+    list-style-type: none;
 }
-.element:nth-child(2)
+nav li
 {
-    flex: 1;
-    text-align: center;
+    margin-right: 40px;
+}
+nav a
+{
+    text-decoration: none;
+    color: black;
+}
+.a1 
+{
+    color: #0065FC
+}
+.a3 
+{
     color: #0065FC;
-}
-.element:nth-child(3)
-{
-    flex: 1;
-    text-align: center;
-}
-.element:nth-child(4)
-{
-    flex: 1;
-    text-align: center;
     font-weight: bold;
-    color: #0065FC;
 }
+
+
+
+
+
+
+
 h1
 {
     font-size: 1.2em;
@@ -51,12 +70,13 @@ h2
     border: 1px solid #F2F2F2;
     border-radius: 10px 0 0 10px;
     background-color: #F2F2F2;
-
+    width: 45px;
 }
 .elementformulaire:nth-child(2)
 {
     border: 1px solid #F2F2F2;
     font-weight: bold;
+    width: 300px;
 }
 .elementformulaire:nth-child(3)
 {
