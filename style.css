@@ -66,29 +66,32 @@ h1
 {
     font-size: 1.5em;
 }
-#formulaire
+#recherche
 {
     display: flex;
-    justify-content: flex-start;
+    width: 33%;
 }
-.elementformulaire:nth-child(1)
+#map_marker
 {
     border: 1px solid #F2F2F2;
     border-radius: 10px 0 0 10px;
     background-color: #F2F2F2;
-    width: 45px;
+    width: 10%;
+    text-align: center;
 }
-.elementformulaire:nth-child(2)
+#espace_recherche
 {
     border: 1px solid #F2F2F2;
+    width: 60%;
     font-weight: bold;
-    width: 300px;
+    padding-left: 3%;
 }
-.elementformulaire:nth-child(3)
+#bouton_recherche
 {
-    border: 1px solid #F2F2F2;
     border-radius: 0 10px 10px 0;
     background-color: #0065FC;
+    width: 40%;
     color: white;
     font-weight: bold;
+    text-align: center;
 }
