@@ -1,14 +1,23 @@
+/* Style global HTML */
 body
 {
     font-family: 'Raleway', sans-serif;
-    font-size: 0.9em;
+    font-size: 0.7em;
 }
-#bloc_page
+h1
+{
+    font-size: 1.3em;
+}
+
+/* Style de la page */
+#main_wrapper
 {
     width: 97%;
     margin: auto;
     border: 1px solid red;
 }
+
+/* Header */
 header
 {
     display: flex;
@@ -20,7 +29,7 @@ header
 }
 #logo_reservia img
 {
-    width: 40%;
+    width: 25%;
     height: auto;
 }
 nav ul
@@ -46,52 +55,292 @@ nav a
     color: #0065FC;
     font-weight: bold;
 }
+
+/* Bloc slogan */
 #slogan
 {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    width: 45%;
 }
 #slogan h1
 {
-    display: flex;
     margin-bottom: 0;
 }
 #slogan p
 {
-    display: flex;
-    margin-top: 0.5em;
+    margin-top: 0.2em;
 }
-h1
-{
-    font-size: 1.5em;
-}
-#recherche
+
+/* Bloc recherche */
+#search
 {
     display: flex;
-    width: 33%;
+    width: 30%;
+    height: 35px;
 }
 #map_marker
 {
     border: 1px solid #F2F2F2;
     border-radius: 10px 0 0 10px;
     background-color: #F2F2F2;
-    width: 10%;
-    text-align: center;
+    flex: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #espace_recherche
 {
     border: 1px solid #F2F2F2;
-    width: 60%;
+    flex: 3;
     font-weight: bold;
     padding-left: 3%;
+    display: flex;
+    align-items: center;
 }
 #bouton_recherche
 {
     border-radius: 0 10px 10px 0;
     background-color: #0065FC;
-    width: 40%;
+    flex: 2;
     color: white;
     font-weight: bold;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bloc filtres */
+#filter_block
+{
+    display: flex;
+    justify-content: flex-start;
+    width: 72%;
+    height: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#filter_block p
+{
+    padding-right: 20%;
+}
+#filtre
+{
+    display: flex;
+    align-items: center;
+    flex: 8%;
+    margin: 0 5px 0 0;
+}
+#economique
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 20%;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
+    margin: 0 15px 0 10px;
+}
+#filter_icon1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #DEEBFF;
+    border: 1px solid #DEEBFF;
+    color: #0065FC;
+    border-radius: 50%;
+}
+#familial
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 17%;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
+    margin: 0 15px 0 15px;
+}
+#filter_icon2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #DEEBFF;
+    border: 1px solid #DEEBFF;
+    color: #0065FC;
+    border-radius: 50%;
+}
+#romantique
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 20%;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
+    margin: 0 15px 0 15px;
+}
+#filter_icon3
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #DEEBFF;
+    border: 1px solid #DEEBFF;
+    color: #0065FC;
+    border-radius: 50%;
+}
+#animaux
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 35%;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
+    margin: 0 0 0 15px;
+}
+#filter_icon4
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #DEEBFF;
+    border: 1px solid #DEEBFF;
+    color: #0065FC;
+    border-radius: 50%;
+}
+
+/* information_block */
+#information_block
+{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin-top: 20px;
+}
+#information_icon
+{
+    color: #0065FC;
+    margin-right: 10px;
+}
+#information_block p
+{
+    font-size: 0.8em;
+}
+
+/* Section */
+section
+{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+   /* Bloc accomodations */
+#accomodations
+{
+    height: ;
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 10px 10px 10px 10px;
+    flex: 2;
+    margin-right: 15px;
+}
+#style_accomodations
+{
+    width: 95%;
+    margin: auto;
+}
+#logement_gauche1
+{
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+}
+.logement 
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 4px solid white;
+    border-radius: 10px 10px 10px 10px; 
+}
+.logement_photo img
+{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px 10px 0px 0px;
+}
+.logement_nom
+{
+    font-weight: bold;
+}
+.logement_prix
+{
+    font-size: 0.8em;
+}
+.logement_5etoiles
+{
+    display: flex;
+}
+.logement_4etoiles
+{
+    display: flex;
+}
+.logement_3etoiles
+{
+    display: flex;
+}
+.etoile_bleue
+{
+    color: #0065FC;
+}
+.etoile_grise
+{
+    color: #F2F2F2;
+}
+#logement_gauche2
+{
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+}
+#plus
+{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Bloc aside */
+aside
+{
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 10px 10px 10px 10px;
+    flex: 1;
+    margin-left: 15px;
+}
+
+#hebergements
+{
+    background-color: #F2F2F2;
+    flex: 2;
+    margin-right: 5px;
+}
+#populaires
+{
+    background-color: #F2F2F2;
+    flex: 1;
+    margin-left: 5px;
 }
