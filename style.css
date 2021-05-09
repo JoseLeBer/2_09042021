@@ -84,30 +84,32 @@ nav a
     border: 1px solid #F2F2F2;
     border-radius: 10px 0 0 10px;
     background-color: #F2F2F2;
-    flex: 0.7;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 0.7;
 }
 #espace_recherche
 {
     border: 1px solid #F2F2F2;
-    flex: 3;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    padding-left: 3%;
     display: flex;
     align-items: center;
+    flex: 3;
+    padding-left: 3%;
 }
 #bouton_recherche
 {
     border-radius: 0 10px 10px 0;
     background-color: #0065FC;
-    flex: 2;
+    font-family: 'Raleway', sans-serif;
     color: white;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 2;
 }
 
 /* Bloc filtres */
@@ -141,18 +143,6 @@ nav a
     border-radius: 20px;
     margin: 0 15px 0 10px;
 }
-#filter_icon1
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    background-color: #DEEBFF;
-    border: 1px solid #DEEBFF;
-    color: #0065FC;
-    border-radius: 50%;
-}
 #familial
 {
     display: flex;
@@ -162,18 +152,6 @@ nav a
     border: 2px solid #F2F2F2;
     border-radius: 20px;
     margin: 0 15px 0 15px;
-}
-#filter_icon2
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    background-color: #DEEBFF;
-    border: 1px solid #DEEBFF;
-    color: #0065FC;
-    border-radius: 50%;
 }
 #romantique
 {
@@ -185,18 +163,6 @@ nav a
     border-radius: 20px;
     margin: 0 15px 0 15px;
 }
-#filter_icon3
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    background-color: #DEEBFF;
-    border: 1px solid #DEEBFF;
-    color: #0065FC;
-    border-radius: 50%;
-}
 #animaux
 {
     display: flex;
@@ -207,7 +173,7 @@ nav a
     border-radius: 20px;
     margin: 0 0 0 15px;
 }
-#filter_icon4
+.filter_icon
 {
     display: flex;
     justify-content: center;
@@ -228,7 +194,7 @@ nav a
     width: 30%;
     margin-top: 20px;
 }
-#information_icon
+#information_block i
 {
     color: #0065FC;
     margin-right: 10px;
@@ -243,20 +209,21 @@ section
 {
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
 }
-
-   /* Bloc accomodations */
-#accomodations
+.euro
 {
-    height: ;
+    font-weight: bold;
+}
+/* Bloc accomodations */
+#hebergements
+{
     background-color: #F2F2F2;
     border: 1px solid #F2F2F2;
     border-radius: 10px 10px 10px 10px;
     flex: 2;
     margin-right: 15px;
 }
-#style_accomodations
+#style_hebergements
 {
     width: 95%;
     margin: auto;
@@ -266,22 +233,28 @@ section
     display: flex;
     justify-content: space-between;
     height: 40%;
+    margin-bottom: 5px;
 }
 .logement 
 {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: white;
     border: 4px solid white;
     border-radius: 10px 10px 10px 10px; 
+    height: 150px;
+    width: 30%;
 }
-.logement_photo img
+.logement_photo
 {
-    display: flex;
-    width: 200px;
+    width: 100%;
     height: 100px;
     border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
 }
+
+
 .logement_nom
 {
     font-weight: bold;
@@ -315,6 +288,7 @@ section
     display: flex;
     justify-content: space-between;
     height: 40%;
+    margin-top: 5px;
 }
 #plus
 {
@@ -331,16 +305,134 @@ aside
     flex: 1;
     margin-left: 15px;
 }
-
-#hebergements
+#style_aside
 {
-    background-color: #F2F2F2;
-    flex: 2;
-    margin-right: 5px;
+    width: 89%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
-#populaires
+#popular_title
 {
-    background-color: #F2F2F2;
-    flex: 1;
-    margin-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logement_droite
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.logement_droite
+{
+    display: flex;
+    background-color: white;
+    border: 4px solid white;
+    border-radius: 10px 10px 10px 10px; 
+    margin: 5px 0 5px 0;
+}
+
+.logement_droite_photo
+{
+    width: 33%;
+    height: 120px;
+}
+
+
+.logement_photo_droite
+{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px 0 0 20px;
+}
+
+
+.logement_droite_info
+{
+    margin-left: 15px;
+    width: 66%;
+}
+
+/* Activités */
+#activites 
+{
+    border: 1px solid red;
+    margin-top: 20px;
+}
+#activites h2
+{
+    margin: 0;
+}
+#lieu
+{
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+    margin-top: 10px;
+}
+.lieuA
+{
+    width: 23%;
+    height: 350px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 5px 5px #686666;
+    display: flex;
+    flex-direction: column;
+}
+.lieu_photo1
+{
+    width: 100%;
+    height: 310px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+.lieu_description1
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+.lieuB
+{
+    width: 23%;
+    height: 350px;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.lieuB1
+{
+    width: 100%;
+    height: 185px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 5px 5px #686666;
+}
+.lieu_photo2
+{
+    width: 100%;
+    height: 145px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+.lieuB2
+{
+    width: 100%;
+    height: 135px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 5px 5px #686666;
+}
+.lieu_photo3
+{
+    width: 100%;
+    height: 95px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
 }
