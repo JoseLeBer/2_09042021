@@ -4,64 +4,99 @@ body
     font-family: 'Raleway', sans-serif;
     font-size: 0.7em;
 }
-h1
+h1, h2
 {
-    font-size: 1.3em;
+    font-size: 1.5em;
+}
+h3
+{
+    font-size: 1,3em;
 }
 
 /* Style de la page */
 #main_wrapper
 {
-    width: 97%;
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
-    border: 1px solid red;
+}
+#wrapper
+{
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Header */
+/* HEADER */
 header
 {
     display: flex;
+    /*flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;*/
+    height: 100px;
 }
-#logo_reservia
+.menu_grid
 {
+    display: grid;
+    grid-template-columns: 70% 10% 10% 10%;
+    grid-template-areas: "logo heber acti regi";
+    width: 100%;
+    height: 100%;
+}
+.logo_reservia
+{
+    grid-area: logo;
     display: flex;
+    align-items: center;
 }
-#logo_reservia img
+.hebergements_menu
 {
-    width: 25%;
-    height: auto;
-}
-nav ul
-{
+    grid-area: heber;
+    display: inline-block;
     display: flex;
-    list-style-type: none;
-}
-nav li
-{
-    margin-right: 40px;
-}
-nav a
-{
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: black;
 }
-.a1 
+.activites_menu
 {
-    color: #0065FC
+    grid-area: acti;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
 }
-.a3 
+.register
 {
+    grid-area: regi;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #0065FC;
     font-weight: bold;
 }
+#logo_reservia_png
+{
+    width: 100px;
+    min-width: 100px;
+    height: 46px;
+}
+.hebergements_menu:hover, .activites_menu:hover
+{
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
 
-/* Bloc slogan */
+/* BLOC SLOGAN */
 #slogan
 {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 50%;
 }
 #slogan h1
 {
@@ -69,25 +104,25 @@ nav a
 }
 #slogan p
 {
-    margin-top: 0.2em;
+    margin-top: 0.3em;
 }
 
-/* Bloc recherche */
+/* BLOC RECHERCHE */
 #search
 {
     display: flex;
     width: 30%;
     height: 35px;
+    margin-top: 15px;
 }
 #map_marker
 {
-    border: 1px solid #F2F2F2;
     border-radius: 10px 0 0 10px;
     background-color: #F2F2F2;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0.7;
+    width: 10%;
 }
 #espace_recherche
 {
@@ -96,131 +131,108 @@ nav a
     font-weight: bold;
     display: flex;
     align-items: center;
-    flex: 3;
+    width: 55%;
     padding-left: 3%;
 }
 #bouton_recherche
 {
     border-radius: 0 10px 10px 0;
     background-color: #0065FC;
-    font-family: 'Raleway', sans-serif;
     color: white;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 2;
+    width: 35%;
 }
-
-/* Bloc filtres */
-#filter_block
+#bouton_recherche2
 {
-    display: flex;
-    justify-content: flex-start;
-    width: 72%;
-    height: 30px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-#filter_block p
-{
-    padding-right: 20%;
-}
-#filtre
-{
-    display: flex;
-    align-items: center;
-    flex: 8%;
-    margin: 0 5px 0 0;
-}
-#economique
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 20%;
-    border: 2px solid #F2F2F2;
-    border-radius: 20px;
-    margin: 0 15px 0 10px;
-}
-#familial
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 17%;
-    border: 2px solid #F2F2F2;
-    border-radius: 20px;
-    margin: 0 15px 0 15px;
-}
-#romantique
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 20%;
-    border: 2px solid #F2F2F2;
-    border-radius: 20px;
-    margin: 0 15px 0 15px;
-}
-#animaux
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 35%;
-    border: 2px solid #F2F2F2;
-    border-radius: 20px;
-    margin: 0 0 0 15px;
-}
-.filter_icon
-{
+    border-radius: 10px 10px 10px 10px;
+    background-color: #0065FC;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    background-color: #DEEBFF;
-    border: 1px solid #DEEBFF;
-    color: #0065FC;
-    border-radius: 50%;
+    width: 10%;
 }
 
-/* information_block */
-#information_block
+/* BLOC FILTRES */
+.filter_block
 {
     display: flex;
     align-items: center;
-    width: 30%;
-    margin-top: 20px;
+    width: 72%;
+    height: 30px;
+    margin-top: 40px;
+}
+.filter_title
+{
+    display: flex;
+    align-items: center;
+}
+.filter_list
+{
+    display: flex;
+}
+.filter_item1, .filter_item2, .filter_item3, .filter_item4
+{
+    display: flex;
+    align-items: center;
+    border: 3px solid #F2F2F2;
+    border-radius: 50px; 
+    height: 30px;
+    margin-left: 20px;
+}
+.filter_item1:hover, .filter_item2:hover, .filter_item3:hover, .filter_item4:hover
+{
+    background-color: #DEEBFF;
+}
+.filter_icon, .filter_icon1
+{
+    background-color: #DEEBFF;
+    color: #0065FC;
+    border-radius: 100%;
+    padding: 10px;
+}
+.filter_icon1
+{
+    padding: 10px 12px;
+}
+
+/* BLOC INFORMATIONS */
+#information_block
+{
+    width: 40%;
+    margin-top: 30px;
 }
 #information_block i
 {
     color: #0065FC;
+    border: 2px solid #F2F2F2;
+    border-radius: 100%;
+    padding: 7px 12px;
     margin-right: 10px;
 }
-#information_block p
-{
-    font-size: 0.8em;
-}
 
-/* Section */
+/* SECTION */
 section
 {
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
 .euro
 {
     font-weight: bold;
 }
-/* Bloc accomodations */
+
+/* BLOC HEBERGEMENTS A MARSEILLE */
 #hebergements
 {
     background-color: #F2F2F2;
     border: 1px solid #F2F2F2;
     border-radius: 10px 10px 10px 10px;
-    flex: 2;
+    width: 750px;
     margin-right: 15px;
 }
 #style_hebergements
@@ -232,7 +244,7 @@ section
 {
     display: flex;
     justify-content: space-between;
-    height: 40%;
+    height: 45%;
     margin-bottom: 5px;
 }
 .logement 
@@ -245,6 +257,13 @@ section
     border-radius: 10px 10px 10px 10px; 
     height: 150px;
     width: 30%;
+    box-shadow: 1px 5px 5px #686666;
+}
+.lien 
+{
+    display: block;
+    text-decoration: none;
+    color: black;
 }
 .logement_photo
 {
@@ -253,8 +272,6 @@ section
     border-radius: 10px 10px 0px 0px;
     object-fit: cover;
 }
-
-
 .logement_nom
 {
     font-weight: bold;
@@ -263,18 +280,12 @@ section
 {
     font-size: 0.8em;
 }
-.logement_5etoiles
+.logement_5etoiles, .logement_4etoiles, .logement_3etoiles
 {
     display: flex;
 }
-.logement_4etoiles
-{
-    display: flex;
-}
-.logement_3etoiles
-{
-    display: flex;
-}
+
+
 .etoile_bleue
 {
     color: #0065FC;
@@ -287,22 +298,22 @@ section
 {
     display: flex;
     justify-content: space-between;
-    height: 40%;
-    margin-top: 5px;
+    height: 45%;
+    margin-top: 30px;
 }
 #plus
 {
-    margin-top: 20px;
+    margin-top: 30px;
     font-weight: bold;
 }
 
-/* Bloc aside */
+/* BLOC LES PLUS POPULAIRES */
 aside
 {
     background-color: #F2F2F2;
     border: 1px solid #F2F2F2;
     border-radius: 10px 10px 10px 10px;
-    flex: 1;
+    width: 350px;
     margin-left: 15px;
 }
 #style_aside
@@ -319,11 +330,12 @@ aside
     align-items: center;
 }
 
-#logement_droite
+#logement_populaire
 {
     display: flex;
     flex-direction: column;
 }
+
 
 .logement_droite
 {
@@ -340,7 +352,6 @@ aside
     height: 120px;
 }
 
-
 .logement_photo_droite
 {
     width: 100%;
@@ -349,18 +360,16 @@ aside
     border-radius: 10px 0 0 20px;
 }
 
-
 .logement_droite_info
 {
     margin-left: 15px;
     width: 66%;
 }
 
-/* Activités */
+/* BLOC ACTIVITES */
 #activites 
 {
-    border: 1px solid red;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 #activites h2
 {
@@ -373,7 +382,7 @@ aside
     height: 350px;
     margin-top: 10px;
 }
-.lieuA
+#lieuA, #lieuC
 {
     width: 23%;
     height: 350px;
@@ -389,7 +398,7 @@ aside
     border-radius: 10px 10px 0 0;
     object-fit: cover;
 }
-.lieu_description1
+.lieu_description
 {
     width: 100%;
     height: 40px;
@@ -399,7 +408,7 @@ aside
     align-items: center;
     padding-left: 15px;
 }
-.lieuB
+#lieuB, #lieuD
 {
     width: 23%;
     height: 350px;
@@ -408,7 +417,7 @@ aside
     flex-direction: column;
     justify-content: space-between;
 }
-.lieuB1
+.lieuB1, .lieuD1
 {
     width: 100%;
     height: 185px;
@@ -422,7 +431,7 @@ aside
     border-radius: 10px 10px 0 0;
     object-fit: cover;
 }
-.lieuB2
+.lieuB2, .lieuD2
 {
     width: 100%;
     height: 135px;
@@ -435,4 +444,245 @@ aside
     height: 95px;
     border-radius: 10px 10px 0 0;
     object-fit: cover;
+}
+
+/* Footer */
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    margin-top: 50px;
+}
+#a_propos
+{
+    margin: 20px 0 0 0;
+}
+#nos_hebergements
+{
+    margin: 20px 0 0 0;
+}
+#assistance
+{
+    margin: 20px 0 0 0;
+}
+
+/* MEDIA QUERIES */
+@media all and (max-width: 992px)
+{
+/* SECTION */
+    section 
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #hebergements
+    {
+        order: 2;
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    aside
+    {
+        order: 1;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media all and (min-width: 768px)
+{
+    #bouton_recherche2
+    {
+        display: none;
+    }
+}
+
+@media all and (max-width: 768px)
+{
+/* HEADER */
+    header
+    {
+        border-bottom: 3px solid #F2F2F2;
+    }
+    .menu_grid
+    {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50 50%;
+        grid-template-areas: 
+        "logo regi"
+        "heber acti"
+        ;
+        width: 100%;
+        height: 100%;
+    }
+    .hebergements_menu:hover, .activites_menu:hover
+    {
+        color: #0065FC;
+        border-top: none;
+        border-bottom: 3px solid #0065FC;
+    }
+/* BLOC SLOGAN */
+    #slogan
+    {
+       width:100%;
+    }
+    h1 
+    {
+        font-size: 2em;
+        width: 100%;
+    }
+
+/* BLOC RECHERCHE */
+    #search
+    {
+        width: 95%;
+        margin-top: 20px;
+    }
+    #bouton_recherche
+    {
+        display: none;
+    }
+
+/* BLOC FILTRES */
+    .filter_block
+    {
+        height: fit-content;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+    .filter_title
+    {
+        margin-left: 25px;
+    }
+    .filter_list
+    {
+        flex-wrap: wrap;
+    }
+    .filter_item1
+    {
+        width: 220px;
+    }
+    .filter_item2
+    {
+        width: 170px;
+    }
+    .filter_item3
+    {
+        width: 200px;
+        margin-top: 10px;
+    }
+    .filter_item4
+    {
+        width: 270px;
+        margin-top: 10px;
+    }
+
+/* BLOC INFORMATION */
+    #information_block
+    {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+/* SECTION */
+    section 
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #hebergements
+    {
+        order: 2;
+        width: 100%;
+        margin: auto;
+        border-radius: 0;
+        background-color: white;
+        border: 0px;
+    }
+    #logement_gauche1
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #logement_gauche2
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .logement
+    {
+        width: 95%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .logement_photo
+    {
+        height: 150px;
+    }
+
+/* BLOC LES PLUS POPULAIRES */
+    aside
+    {
+        order: 1;
+        width: 100%;
+        margin: auto;
+        border-radius: 0;
+    }
+
+/* BLOC ACTIVITES */
+    #lieu
+    {
+        flex-direction: column;
+        justify-content: start;
+        height: fit-content;
+        margin: auto;
+    }
+    #lieuA, #lieuB, #lieuC, #lieuD
+    {
+        width: 100%;
+    }
+    #lieuA, #lieuC
+    {
+        height: 200px;
+        margin-top: 20px;
+    }
+    .lieu_photo1, .lieu_photo2, .lieu_photo3
+    {
+        height: 160px;
+    }
+    #lieuB, #lieuD
+    {
+        height: fit-content;
+    }
+    .lieuB1, .lieuB2, .lieuD1, .lieuD2
+    {
+        height: 200px;
+        margin-top: 20px;
+    }
+
+/* FOOTER */
+    footer
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #a_propos
+    {
+        width: 95%;
+        margin-left: 15px;
+    }
+    #nos_hebergements
+    {
+        width: 95%;
+        margin-left: 15px;
+    }
+    #assistance
+    {
+        width: 95%;
+        margin-left: 15px;
+    }
 }

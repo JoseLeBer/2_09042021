@@ -9,59 +9,66 @@
     </head>
 
     <body>
-        <div id="main_wrapper">
-            <header>
-                <div id="logo_reservia">
-                    <img src="logo/Reservia@3x.png" alt="Logo Reservia" />
-                </div>
+    <div id="main_wrapper">
 
-                <nav>
-                    <ul>
-                        <li><a href="#hebergements" class="a1">Hébergements</a></li>
-                        <li><a href="#activites">Activités</a></li>
-                        <li><a href="#" class="a3">S'inscrire</a></li>
-                    </ul>
-                </nav>
+        <div id="wrapper">
+        
+    <!--HEADER-->
+            <header>
+                <div class="menu_grid">
+                    <div class="logo_reservia"><img src="assets/Reservia@3x.png" alt="Logo Reservia" id="logo_reservia_png" /></div>
+                    <a href="#hebergements" class="hebergements_menu">Hébergements</a>
+                    <a href="#activites" class="activites_menu">Activités</a>
+                    <div class="register">S'inscrire</div>
+                </div>
             </header>
 
+    <!-- BLOC SLOGAN-->
             <div id="slogan">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
 
+    <!--BLOC RECHERCHE-->
             <form method="post" action="traitement.php" id="search">
                 <div id="map_marker"><i class="fas fa-map-marker-alt"></i></div>
-                <input type="text" name="destination" id="espace_recherche" value="Marseille, France" placeholder="Votre destination" />
-                <input type="submit" value="Rechercher" id="bouton_recherche" />
+                <input type="text" name="destination" id="espace_recherche" placeholder="Marseille, France" />
+                <div id="bouton_recherche">Rechercher</div>
+                <div id="bouton_recherche2"><i class="fas fa-search"></i></div>
             </form>
 
-            <div id="filter_block">
-                <div id="filtre">Filtres</div>
-                <div id="economique">
-                    <div class="filter_icon"><i class="fas fa-money-bill-wave"></i></div>
-                    <p>Economique</p>
-                </div>
-                <div id="familial">
-                    <div class="filter_icon"><i class="fas fa-child"></i></div>
-                    <p>Familial</p>
-                </div>
-                <div id="romantique">
-                    <div class="filter_icon"><i class="fas fa-heart"></i></div>
-                    <p>Romantique</p>
-                </div>
-                <div id="animaux">
-                    <div class="filter_icon"><i class="fas fa-dog"></i></div>
-                    <p>Animaux autorisés</p>
-                </div>
+    <!--BLOC FILTRES-->
+            <div class="filter_block">
+                    <h3 class="filter_title">Filtres</h3>
+                    <div class="filter_list">
+                        <div class="filter_item1">
+                            <div class="filter_icon"><i class="fas fa-money-bill-wave"></i></div>
+                            <p class="nom_du_filtre">Economique</p>
+                        </div>
+                        <div class="filter_item2">
+                            <div class="filter_icon1"><i class="fas fa-child"></i></div>
+                            <p class="nom_du_filtre">Familial</p>
+                        </div>
+                        <div class="filter_item3">
+                            <div class="filter_icon"><i class="fas fa-heart"></i></div>
+                            <p class="nom_du_filtre">Romantique</p>
+                        </div>
+                        <div class="filter_item4">
+                            <div class="filter_icon"><i class="fas fa-dog"></i></div>
+                            <p class="nom_du_filtre">Animaux autorisés</p>
+                        </div>
+                    </div>
             </div>
-
+            
+    <!--BLOC INFORMATION-->
             <div id="information_block">
-               <i class="fas fa-info-circle"></i>
-                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                <i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville
             </div>
 
+    <!--SECTION-->
             <section>
 
+    <!--BLOC HEBERGEMENTS A MARSEILLE-->
                 <div id="hebergements">
                     <div id="style_hebergements">
                         <h2>Hébergements à Marseille</h1>
@@ -69,32 +76,38 @@
                         <div id="logement_gauche1">
 
                             <div class="logement">
-                                <div><img src="hebergements/4_small/auberge_la_cannebiere.jpg" alt="Auberge la Cannebière" class="logement_photo" /></div>
+                                <a href="#" class="lien">
+                                <div><img src="assets/auberge_la_cannebiere.jpg" alt="Auberge la Cannebière" class="logement_photo" /></div>
                                 <div class="logement_nom">Auberge la Cannebière</div>
                                 <div class="logement_prix">Nuit à partir de 25<span class="euro">€</span></div>
                                 <div class="logement_4etoiles">
                                     <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                                     <div class="etoile_grise"><i class="fas fa-star"></i></div>
                                 </div>
+                                </a>
                             </div>
 
                             <div class="logement">
-                                <div><img src="hebergements/4_small/hotel_du_port.jpg" alt="Hôtel du port" class="logement_photo" /></div>
+                                <a href="#" class="lien">
+                                <div><img src="assets/hotel_du_port.jpg" alt="Hôtel du port" class="logement_photo" /></div>
                                 <div class="logement_nom">Hôtel du port</div>
                                 <div class="logement_prix">Nuit à partir de 52<span class="euro">€</span></div>
                                 <div class="logement_5etoiles">
                                     <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> 
                                 </div>
+                                </a>
                             </div>
 
                             <div class="logement">
-                                <div><img src="hebergements/4_small/hotel_les_mouettes.jpg" alt="Hôtel Les mouettes" class="logement_photo" /></div>
+                                <a href="#" class="lien">
+                                <div><img src="assets/hotel_les_mouettes.jpg" alt="Hôtel Les mouettes" class="logement_photo" /></div>
                                 <div class="logement_nom">Hôtel Les mouettes</div>
                                 <div class="logement_prix">Nuit à partir de 76<span class="euro">€</span></div>
                                 <div class="logement_4etoiles">
                                     <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                                     <div class="etoile_grise"><i class="fas fa-star"></i></div>
                                 </div>
+                                </a>
                             </div>
 
                         </div>
@@ -102,32 +115,38 @@
                         <div id="logement_gauche2">
 
                             <div class="logement">
-                                <div><img src="hebergements/4_small/hotel_de_la_mer.jpg" alt="Hôtel de la mer" class="logement_photo" /></div>
+                                <a href="#" class="lien">
+                                <div><img src="assets/hotel_de_la_mer.jpg" alt="Hôtel de la mer" class="logement_photo" /></div>
                                 <div class="logement_nom">Hôtel de la mer</div>
                                 <div class="logement_prix">Nuit à partir de 46<span class="euro">€</span></div>
                                 <div class="logement_3etoiles">
                                     <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                                     <div class="etoile_grise"><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                                 </div>
+                                </a>
                             </div>
 
                             <div class="logement">
-                                <div><img src="hebergements/4_small/auberge_le_panier.jpg" alt="Auberge Le Panier" class="logement_photo" /></div>
+                                <a href="#" class="lien">
+                                <div><img src="assets/auberge_le_panier.jpg" alt="Auberge Le Panier" class="logement_photo" /></div>
                                 <div class="logement_nom">Auberge Le Panier</div>
                                 <div class="logement_prix">Nuit à partir de 23<span class="euro">€</span></div>
                                 <div class="logement_4etoiles">
                                     <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                                     <div class="etoile_grise"><i class="fas fa-star"></i></div>
                                 </div>
+                                </a>
                             </div>
 
                             <div class="logement">
-                                <div><img src="hebergements/4_small/hotel_chez_amina.jpg" alt="Hôtel chez Amina" class="logement_photo" /></div>
+                                <a href="#" class="lien">
+                                <div><img src="assets/hotel_chez_amina.jpg" alt="Hôtel chez Amina" class="logement_photo" /></div>
                                 <div class="logement_nom">Hôtel chez Amina</div>
                                 <div class="logement_prix">Nuit à partir de 96<span class="euro">€</span></div>
                                 <div class="logement_5etoiles">
                                     <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> 
                                 </div>
+                                </a>
                             </div>
 
                         </div>
@@ -135,6 +154,7 @@
                     </div>
                 </div>
                 
+    <!--BLOC LES PLUS POPULAIRES-->
                 <aside>
                     <div id="style_aside">
                         <div id="popular_title">
@@ -142,95 +162,155 @@
                             <p><i class="fas fa-chart-line"></i></p>
                         </div>
 
-                        <div id="logement_droite">
+                        <div id="logement_populaire"> 
 
-                        <div class="logement_droite">
+                            <div class="logement_droite">
+                                <div class="logement_droite_photo">
+                                    <div><img src="assets/hotel_le_soleil.jpg" alt="Hôtel Le soleil du matin" class="logement_photo_droite" /></div>
+                                </div>
 
-                            <div class="logement_droite_photo">
-                                <div><img src="hebergements/4_small/hotel_le_soleil.jpg" alt="Hôtel Le soleil du matin" class="logement_photo_droite" /></div>
-                            </div>
-
-                            <div class="logement_droite_info">
-                                <div class="logement_nom">Hôtel Le soleil du <br>
+                                <div class="logement_droite_info">
+                                    <div class="logement_nom">Hôtel Le soleil du <br>
                                     matin</div>
-                                <div class="logement_prix">Nuit à partir de 128<span class="euro">€</span></div>
-                                <div class="logement_5etoiles">
+                                    <div class="logement_prix">Nuit à partir de 128<span class="euro">€</span></div>
+                                    <div class="logement_5etoiles">
                                     <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> 
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="logement_droite">
-                            <div class="logement_droite_photo">
-                                <div><img src="hebergements/4_small/au_coeur_de_leau.jpg" alt="Au coeur de l'eau Chambres d'hôtes" class="logement_photo_droite" /></div>
+                                
                             </div>
 
-                            <div class="logement_droite_info">
-                                <div class="logement_nom">Au coeur de l'eau <br>
+                        
+
+                            <div class="logement_droite">
+                                <div class="logement_droite_photo">
+                                    <div><img src="assets/au_coeur_de_leau.jpg" alt="Au coeur de l'eau Chambres d'hôtes" class="logement_photo_droite" /></div>
+                                </div>
+
+                                <div class="logement_droite_info">
+                                    <div class="logement_nom">Au coeur de l'eau <br>
                                     Chambres d'hôtes</div>
-                                <div class="logement_prix">Nuit à partir de 71<span class="euro">€</span></div>
-                                <div class="logement_4etoiles">
+                                    <div class="logement_prix">Nuit à partir de 71<span class="euro">€</span></div>
+                                    <div class="logement_4etoiles">
                                     <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                                     <div class="etoile_grise"><i class="fas fa-star"></i></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        
 
-                        <div class="logement_droite">
-                            <div class="logement_droite_photo">
-                                <div><img src="hebergements/4_small/hotel_tout_bleu.jpg" alt="Hôtel Tout bleu et Blanc" class="logement_photo_droite" /></div>
-                            </div>
+                            <div class="logement_droite">
+                                <div class="logement_droite_photo">
+                                    <div><img src="assets/hotel_tout_bleu.jpg" alt="Hôtel Tout bleu et Blanc" class="logement_photo_droite" /></div>
+                                </div>
 
-                            <div class="logement_droite_info">
-                                <div class="logement_nom">Hôtel Tout bleu et <br>
+                                <div class="logement_droite_info">
+                                    <div class="logement_nom">Hôtel Tout bleu et <br>
                                     Blanc</div>
-                                <div class="logement_prix">Nuit à partir de 68<span class="euro">€</span></div>
-                                <div class="logement_4etoiles">
+                                    <div class="logement_prix">Nuit à partir de 68<span class="euro">€</span></div>
+                                    <div class="logement_4etoiles">
                                     <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                                     <div class="etoile_grise"><i class="fas fa-star"></i></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         
-                        </div>
+                        
 
                     </div>
                 </aside>
             </section>
 
-                <div id="activites">
+    <!--BLOC ACTIVITES-->
+            <div id="activites">
                     <h2>Activités à Marseille</h1>
                     <div id="lieu">
-                        <div class="lieuA">
-                            <div><img src="activites/4_small/vieux_port.jpg" alt="Vieux-Port" class="lieu_photo1" /></div>
-                            <div class="lieu_description1">Vieux Port</div>
+                        <div id="lieuA">
+                            <a href="#" class="lien">
+                            <div><img src="assets/vieux_port.jpg" alt="Vieux-Port" class="lieu_photo1" /></div>
+                            <div class="lieu_description">Vieux Port</div>
+                            </a>
                         </div>
-                        <div class="lieuB">
+                        <div id="lieuB">
                             <div class="lieuB1">
-                                <div><img src="activites/4_small/fort_de_pomegues.jpg" alt="Fort de Pomègues" class="lieu_photo2" /></div>
-                                <div class="lieu_description1">Fort de Pomègues</div>
+                                <a href="#" class="lien">
+                                <div><img src="assets/fort_de_pomegues.jpg" alt="Fort de Pomègues" class="lieu_photo2" /></div>
+                                <div class="lieu_description">Fort de Pomègues</div>
+                                </a>
                             </div>
                             <div class="lieuB2">
-                                <div><img src="activites/4_small/ile_du_frioul.jpg" alt="Îles du Frioul" class="lieu_photo3" /></div>
-                                <div class="lieu_description1">Îles du Frioul</div>
+                                <a href="#" class="lien">
+                                <div><img src="assets/ile_du_frioul.jpg" alt="Îles du Frioul" class="lieu_photo3" /></div>
+                                <div class="lieu_description">Îles du Frioul</div>
+                                </a>
                             </div>
                         </div>
-                        <div class="lieuA">
-                            <div><img src="activites/4_small/parc_national.jpg" alt="Parc National des Calanques" class="lieu_photo1" /></div>
-                            <div class="lieu_description1">Parc National des Calanques</div>
+                        <div id="lieuC">
+                            <a href="#" class="lien">
+                            <div><img src="assets/parc_national.jpg" alt="Parc National des Calanques" class="lieu_photo1" /></div>
+                            <div class="lieu_description">Parc National des Calanques</div>
+                            </a>
                         </div>
-                        <div class="lieuB">
-                            <div class="lieuB2">
-                                <div><img src="activites/4_small/notre_dame.jpg" alt="Notre-Dame-de-la-Garde" class="lieu_photo3" /></div>
-                                <div class="lieu_description1">Notre-Dame-de-la-Garde</div>
+                        <div id="lieuD">
+                            <div class="lieuD2">
+                                <a href="#" class="lien">
+                                <div><img src="assets/notre_dame.jpg" alt="Notre-Dame-de-la-Garde" class="lieu_photo3" /></div>
+                                <div class="lieu_description">Notre-Dame-de-la-Garde</div>
+                                </a>
                             </div>
-                            <div class="lieuB1">
-                                <div><img src="activites/4_small/parc_longchamp.jpg" alt="Parc Longchamp" class="lieu_photo2" /></div>
-                                <div class="lieu_description1">Parc Longchamp</div>
+                            <div class="lieuD1">
+                                <a href="#" class="lien">
+                                <div><img src="assets/parc_longchamp.jpg" alt="Parc Longchamp" class="lieu_photo2" /></div>
+                                <div class="lieu_description">Parc Longchamp</div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
         </div>
+
+        <!--FOOTER-->
+        <footer>
+            <div id="a_propos">
+                <h3>A propos</h3>
+                <p>Fonctionnement du site</p>
+                <p>Conditions générales de vente</p>
+                <p>Données et confidentialité</p>
+            </div>
+            <div id="nos_hebergements">
+                <h3>Nos hébergements</h3>
+                <p>Charte qualité</p>
+                <p>Soumettre votre hôtel</p>
+            </div>
+            <div id="assistance">
+                <h3>Assistance</h3>
+                <p>Centre d'aide</p>
+                <p>Nous contacter</p>
+            </div>
+        </footer>
+    </div>
     </body>
 </html>
+
+<!-- TENTATIVE BLOC FILTRE EN <UL> 
+            
+            <nav id="filtre2">
+                <p>Filtres</p>
+                <ul id="filtre2_liste">
+                    <li id="filtre2_eco">
+                        <span class="filter_icon2"><i class="fas fa-money-bill-wave"></i></span>Economique
+                    </li>
+                    <li id="filtre2_fami">
+                        <span class="filter_icon2"><i class="fas fa-child"></i></span>Familial
+                    </li>
+                    <li id="filtre2_rom">
+                        <span class="filter_icon2"><i class="fas fa-heart"></i></span>Romantique
+                    </li>
+                    <li id="filtre2_ani">
+                        <span class="filter_icon2"><i class="fas fa-dog"></i></span>Animaux autorisés
+                    </li>
+                </ul>
+            </nav>
+
+-->
