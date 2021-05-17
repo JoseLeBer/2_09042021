@@ -50,9 +50,22 @@ header
     display: flex;
     align-items: center;
 }
+#logo_reservia_png
+{
+    width: 100px;
+    min-width: 100px;
+    height: 46px;
+}
 .hebergements_menu
 {
     grid-area: heber;
+}
+.activites_menu
+{
+    grid-area: acti;
+}
+.hebergements_menu, .activites_menu
+{
     display: inline-block;
     display: flex;
     justify-content: center;
@@ -60,15 +73,10 @@ header
     text-decoration: none;
     color: black;
 }
-.activites_menu
+.hebergements_menu:hover, .activites_menu:hover
 {
-    grid-area: acti;
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: black;
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
 }
 .register
 {
@@ -78,17 +86,6 @@ header
     align-items: center;
     color: #0065FC;
     font-weight: bold;
-}
-#logo_reservia_png
-{
-    width: 100px;
-    min-width: 100px;
-    height: 46px;
-}
-.hebergements_menu:hover, .activites_menu:hover
-{
-    color: #0065FC;
-    border-top: 2px solid #0065FC;
 }
 
 /* BLOC SLOGAN */
@@ -134,25 +131,23 @@ header
     width: 55%;
     padding-left: 3%;
 }
-#bouton_recherche
+#bouton_recherche, #bouton_recherche2
 {
-    border-radius: 0 10px 10px 0;
     background-color: #0065FC;
     color: white;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#bouton_recherche
+{
+    border-radius: 0 10px 10px 0;
+    font-weight: bold;
     width: 35%;
 }
 #bouton_recherche2
 {
     border-radius: 10px 10px 10px 10px;
-    background-color: #0065FC;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 10%;
 }
 
@@ -240,24 +235,23 @@ section
     width: 95%;
     margin: auto;
 }
-#logement_gauche1
+#logement_gauche
 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    height: 45%;
-    margin-bottom: 5px;
 }
 .logement 
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: white;
     border: 4px solid white;
     border-radius: 10px 10px 10px 10px; 
     height: 150px;
     width: 30%;
     box-shadow: 1px 5px 5px #686666;
+    margin-bottom: 20px;
 }
 .lien 
 {
@@ -284,8 +278,6 @@ section
 {
     display: flex;
 }
-
-
 .etoile_bleue
 {
     color: #0065FC;
@@ -294,16 +286,9 @@ section
 {
     color: #F2F2F2;
 }
-#logement_gauche2
-{
-    display: flex;
-    justify-content: space-between;
-    height: 45%;
-    margin-top: 30px;
-}
 #plus
 {
-    margin-top: 30px;
+    margin: 15px 0 0 5px;
     font-weight: bold;
 }
 
@@ -320,8 +305,6 @@ aside
 {
     width: 89%;
     margin: auto;
-    display: flex;
-    flex-direction: column;
 }
 #popular_title
 {
@@ -329,41 +312,52 @@ aside
     justify-content: space-between;
     align-items: center;
 }
-
 #logement_populaire
 {
     display: flex;
     flex-direction: column;
 }
-
-
 .logement_droite
 {
-    display: flex;
+    height: 100px;
     background-color: white;
     border: 4px solid white;
     border-radius: 10px 10px 10px 10px; 
-    margin: 5px 0 5px 0;
+    margin: 0 0 30px 0;
+    box-shadow: 1px 5px 5px #686666;
 }
-
-.logement_droite_photo
+.lien2
 {
-    width: 33%;
-    height: 120px;
+    display: block;
+    display: flex;
+    text-decoration: none;
+    color: black;
 }
-
+.logement_droite_partie_gauche
+{
+    width: 35%;
+}
 .logement_photo_droite
 {
     width: 100%;
-    height: 120px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 10px 0 0 20px;
+    border-radius: 10px 0 0 10px;
 }
-
-.logement_droite_info
+.logement_droite_partie_droite
 {
     margin-left: 15px;
     width: 66%;
+}
+.logement_prix_d
+{
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+.logement_etoiles
+{
+    display: flex;
+    margin-top: 25px;
 }
 
 /* BLOC ACTIVITES */
@@ -450,19 +444,11 @@ aside
 footer
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #F2F2F2;
     margin-top: 50px;
 }
-#a_propos
-{
-    margin: 20px 0 0 0;
-}
-#nos_hebergements
-{
-    margin: 20px 0 0 0;
-}
-#assistance
+#a_propos, #nos_hebergements, #assistance
 {
     margin: 20px 0 0 0;
 }
@@ -523,6 +509,10 @@ footer
         color: #0065FC;
         border-top: none;
         border-bottom: 3px solid #0065FC;
+    }
+    .register
+    {
+        margin-left: 75%;
     }
 /* BLOC SLOGAN */
     #slogan
@@ -603,16 +593,6 @@ footer
         background-color: white;
         border: 0px;
     }
-    #logement_gauche1
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    #logement_gauche2
-    {
-        display: flex;
-        flex-direction: column;
-    }
     .logement
     {
         width: 95%;
@@ -631,6 +611,18 @@ footer
         width: 100%;
         margin: auto;
         border-radius: 0;
+    }
+    .logement_droite
+    {
+        height: 150px;
+    }
+    .logement_photo_droite
+    {
+        height: 150px;
+    }
+    .logement_etoiles
+    {
+        margin-top: 65px;
     }
 
 /* BLOC ACTIVITES */
@@ -670,19 +662,9 @@ footer
         display: flex;
         flex-direction: column;
     }
-    #a_propos
+    #a_propos, #nos_hebergements, #assistance
     {
         width: 95%;
-        margin-left: 15px;
-    }
-    #nos_hebergements
-    {
-        width: 95%;
-        margin-left: 15px;
-    }
-    #assistance
-    {
-        width: 95%;
-        margin-left: 15px;
+        margin-left: 3%;
     }
 }
