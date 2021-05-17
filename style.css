@@ -159,6 +159,7 @@ header
     width: 72%;
     height: 30px;
     margin-top: 40px;
+    font-weight: bold;
 }
 .filter_title
 {
