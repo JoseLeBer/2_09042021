@@ -11,16 +11,16 @@
 
     <body>
     <div id="main_wrapper">
-        <div id="wrapper">
+        <div id="wrappe">
         
     <!--HEADER-->
             <header>
-                <div class="menu_grid">
+                <nav class="menu_grid">
                     <div class="logo_reservia"><img src="assets/Reservia@3x.png" alt="Logo Reservia" id="logo_reservia_png" /></div>
                     <a href="#hebergements" class="hebergements_menu">Hébergements</a>
                     <a href="#activites" class="activites_menu">Activités</a>
                     <div class="register">S'inscrire</div>
-                </div>
+                </nav>
             </header>
 
     <!-- BLOC SLOGAN-->
@@ -30,35 +30,37 @@
             </div>
 
     <!--BLOC RECHERCHE-->
+            <div id="search_block">
             <form method="post" action="traitement.php" id="search">
                 <div id="map_marker"><i class="fas fa-map-marker-alt"></i></div>
                 <input type="text" name="destination" id="espace_recherche" placeholder="Marseille, France" />
                 <div id="bouton_recherche">Rechercher</div>
                 <div id="bouton_recherche2"><i class="fas fa-search"></i></div>
-            </form>
+            </form></div>
 
     <!--BLOC FILTRES-->
+            <div id="filter_main">
             <div class="filter_block">
                     <h3 class="filter_title">Filtres</h3>
                     <div class="filter_list">
                         <div class="filter_item1">
                             <div class="filter_icon"><i class="fas fa-money-bill-wave"></i></div>
-                            <p class="nom_du_filtre">Economique</p>
+                            <p class="filter_name">Economique</p>
                         </div>
                         <div class="filter_item2">
                             <div class="filter_icon1"><i class="fas fa-child"></i></div>
-                            <p class="nom_du_filtre">Familial</p>
+                            <p class="filter_name">Familial</p>
                         </div>
                         <div class="filter_item3">
                             <div class="filter_icon"><i class="fas fa-heart"></i></div>
-                            <p class="nom_du_filtre">Romantique</p>
+                            <p class="filter_name">Romantique</p>
                         </div>
                         <div class="filter_item4">
                             <div class="filter_icon"><i class="fas fa-dog"></i></div>
-                            <p class="nom_du_filtre">Animaux autorisés</p>
+                            <div class="filter_name">Animaux autorisés</div>
                         </div>
                     </div>
-            </div>
+            </div></div>
             
     <!--BLOC INFORMATION-->
             <div id="information_block">

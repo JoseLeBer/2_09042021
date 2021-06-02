@@ -32,6 +32,8 @@ header
 {
     display: flex;
     height: 100px;
+    width: 95%;
+    margin: auto;
 }
 .menu_grid
 {
@@ -90,7 +92,8 @@ header
 {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 95%;
+    margin: auto;
 }
 #slogan h1
 {
@@ -102,6 +105,11 @@ header
 }
 
 /* BLOC RECHERCHE */
+#search_block
+{
+    width: 95%;
+    margin: auto;
+}
 #search
 {
     display: flex;
@@ -121,12 +129,16 @@ header
 #espace_recherche
 {
     border: 1px solid #F2F2F2;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
     display: flex;
     align-items: center;
     width: 55%;
     padding-left: 3%;
+}
+#espace_recherche::placeholder
+{
+    color: black;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
 }
 #bouton_recherche, #bouton_recherche2
 {
@@ -149,6 +161,11 @@ header
 }
 
 /* BLOC FILTRES */
+#filter_main
+{
+    width: 95%;
+    margin: auto;
+}
 .filter_block
 {
     display: flex;
@@ -166,15 +183,32 @@ header
 .filter_list
 {
     display: flex;
+    width: 100%;
 }
 .filter_item1, .filter_item2, .filter_item3, .filter_item4
 {
     display: flex;
     align-items: center;
-    border: 3px solid #F2F2F2;
+    border: 2px solid #F2F2F2;
     border-radius: 50px; 
     height: 30px;
     margin-left: 20px;
+}
+.filter_item1
+{
+    width: 25%;
+}
+.filter_item2
+{
+    width: 18%;
+}
+.filter_item3
+{
+    width: 22%;
+}
+.filter_item4
+{
+    width: 30%;
 }
 .filter_item1:hover, .filter_item2:hover, .filter_item3:hover, .filter_item4:hover
 {
@@ -191,11 +225,16 @@ header
 {
     padding: 10px 12px;
 }
+.filter_name
+{
+    margin: auto;
+}
 
 /* BLOC INFORMATIONS */
 #information_block
 {
-    width: 40%;
+    width: 95%;
+    margin: auto;
     margin-top: 30px;
 }
 #information_block i
@@ -212,6 +251,8 @@ section
 {
     display: flex;
     justify-content: space-between;
+    width: 95%;
+    margin: auto;
     margin-top: 30px;
 }
 .euro
@@ -224,7 +265,7 @@ section
 {
     background-color: #F2F2F2;
     border: 1px solid #F2F2F2;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 20px;
     width: 750px;
     margin-right: 15px;
 }
@@ -248,7 +289,7 @@ section
     border-radius: 10px 10px 10px 10px; 
     height: 150px;
     width: 30%;
-    box-shadow: 1px 5px 5px #686666;
+    box-shadow: 1px 3px 5px #0000002e;
     margin-bottom: 20px;
 }
 .lien 
@@ -295,7 +336,7 @@ aside
 {
     background-color: #F2F2F2;
     border: 1px solid #F2F2F2;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 20px;
     width: 350px;
     margin-left: 15px;
 }
@@ -322,7 +363,7 @@ aside
     border: 4px solid white;
     border-radius: 10px 10px 10px 10px; 
     margin: 0 0 30px 0;
-    box-shadow: 1px 5px 5px #686666;
+    box-shadow: 1px 3px 5px #0000002e;
 }
 .lien2
 {
@@ -361,6 +402,8 @@ aside
 /* BLOC ACTIVITES */
 #activites 
 {
+    width: 95%;
+    margin: auto;
     margin-top: 50px;
 }
 #activites h2
@@ -379,7 +422,7 @@ aside
     width: 23%;
     height: 350px;
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 1px 5px 5px #686666;
+    box-shadow: 1px 3px 5px #0000002e;
     display: flex;
     flex-direction: column;
 }
@@ -414,7 +457,7 @@ aside
     width: 100%;
     height: 185px;
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 1px 5px 5px #686666;
+    box-shadow: 1px 3px 5px #0000002e;
 }
 .lieu_photo2
 {
@@ -428,7 +471,7 @@ aside
     width: 100%;
     height: 135px;
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 1px 5px 5px #686666;
+    box-shadow: 1px 3px 5px #0000002e;
 }
 .lieu_photo3
 {
@@ -458,18 +501,18 @@ footer
     section 
     {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
+/* BLOC HEBERGEMENTS A MARSEILLE */
     #hebergements
     {
-        order: 2;
         width: 100%;
         margin: auto;
         margin-top: 20px;
     }
+/* BLOC LES PLUS POPULAIRES */
     aside
     {
-        order: 1;
         width: 100%;
         margin: auto;
     }
@@ -515,7 +558,8 @@ footer
 /* BLOC SLOGAN */
     #slogan
     {
-       width:100%;
+       width:95%;
+       margin: auto;
     }
     h1 
     {
@@ -524,6 +568,11 @@ footer
     }
 
 /* BLOC RECHERCHE */
+    #search_block
+    {
+        width: 95%;
+        margin: auto;
+    }
     #search
     {
         width: 95%;
@@ -541,6 +590,7 @@ footer
         flex-direction: column;
         align-items: flex-start;
         margin-top: 20px;
+        width: 100%;
     }
     .filter_title
     {
@@ -552,21 +602,20 @@ footer
     }
     .filter_item1
     {
-        width: 60%;
+        width: 45%;
     }
     .filter_item2
     {
-        width: 40%;
-        margin-top: 10px;
+        width: 39%;
     }
     .filter_item3
     {
-        width: 55%;
+        width: 42%;
         margin-top: 10px;
     }
     .filter_item4
     {
-        width: 70%;
+        width: 55%;
         margin-top: 10px;
     }
 
@@ -574,18 +623,17 @@ footer
     #information_block
     {
         width: 95%;
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
 /* SECTION */
     section 
     {
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        margin: auto;
     }
     #hebergements
     {
-        order: 2;
         width: 100%;
         margin: auto;
         border-radius: 0;
@@ -594,7 +642,8 @@ footer
     }
     .logement
     {
-        width: 95%;
+        width: 100%;
+        margin: auto;
         height: 200px;
         margin-bottom: 20px;
     }
@@ -606,10 +655,9 @@ footer
 /* BLOC LES PLUS POPULAIRES */
     aside
     {
-        order: 1;
         width: 100%;
-        margin: auto;
         border-radius: 0;
+        margin-top: 20px;
     }
     .logement_droite
     {
